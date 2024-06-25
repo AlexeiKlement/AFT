@@ -72,7 +72,7 @@ public class SauceDemoTest {
         browser.findElement(By.name("login-button")).click();
         browser.findElement(By.xpath("//div[text()='Sauce Labs Onesie']"));
         Boolean isPresent = browser.findElement(By.xpath("//div[text()='Sauce Labs Onesie']//preceding::div[@class='inventory_item_description']")).isDisplayed();
-        assertTrue("done", isPresent);
+        assertTrue("The locator is missing", isPresent);
         browser.quit();
     }
 
@@ -90,7 +90,7 @@ public class SauceDemoTest {
         browser.findElement(By.name("login-button")).click();
         browser.findElement(By.xpath("//button[text()='Add to cart']")).click();
         Boolean inPresents = browser.findElement(By.name("remove-sauce-labs-backpack")).isDisplayed();
-        assertTrue("done", inPresents);
+        assertTrue("The locator is missing", inPresents);
         browser.quit();
     }
 }
