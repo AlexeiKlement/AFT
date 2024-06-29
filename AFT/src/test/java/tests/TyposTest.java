@@ -1,24 +1,29 @@
 package tests;
+
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+
 import static org.junit.Assert.assertEquals;
-public class typosTests extends BaseTest {
+
+public class TyposTest extends BaseTest {
     @Test
     public void typosTest1() {
         driver.get("https://the-internet.herokuapp.com/typos");
-        assertEquals(driver.findElement(By.xpath("//p[text()='This example demonstrates a typo being introduced. It does it randomly on each page load.']")).getText(),"This example demonstrates a typo being introduced. It does it randomly on each page load.");
+        assertEquals(driver.findElement(By.xpath("//p[text()='This example demonstrates a typo being introduced. It does it randomly on each page load.']")).getText(), "This example demonstrates a typo being introduced. It does it randomly on each page load.");
     }
+
     @Test
     public void typosTest2() {
         driver.get("https://the-internet.herokuapp.com/typos");
         driver.navigate().refresh();
         driver.navigate().refresh();
         driver.navigate().refresh();
-        assertEquals(driver.findElement(By.xpath("//p [2]")).getText(),"Sometimes you'll see a typo, other times you won't.");
+        assertEquals(driver.findElement(By.xpath("//p [2]")).getText(), "Sometimes you'll see a typo, other times you won't.");
     }
+
     @Test
     public void typosTest3() {
         driver.get("https://the-internet.herokuapp.com/typos");
-        assertEquals(driver.findElement(By.xpath("//p [2]")).getText(),"Sometimes you'll see a typo, other times you won,t.");
+        assertEquals(driver.findElement(By.xpath("//p [2]")).getText(), "Sometimes you'll see a typo, other times you won,t.");
     }
 }

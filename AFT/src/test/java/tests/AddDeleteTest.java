@@ -1,5 +1,8 @@
+package tests;
+
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+import tests.BaseTest;
 
 import static org.testng.AssertJUnit.assertEquals;
 
