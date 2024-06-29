@@ -1,11 +1,7 @@
 package tests;
-
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
-
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 public class typosTests extends BaseTest {
     @Test
     public void typosTest1() {
@@ -26,5 +22,3 @@ public class typosTests extends BaseTest {
         assertEquals(driver.findElement(By.xpath("//p [2]")).getText(),"Sometimes you'll see a typo, other times you won,t.");
     }
 }
-
-

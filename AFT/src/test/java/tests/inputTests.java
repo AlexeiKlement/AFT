@@ -1,13 +1,8 @@
 package tests;
-
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-
 import static org.openqa.selenium.Keys.*;
 import static org.testng.AssertJUnit.assertEquals;
-
 public class inputTests extends BaseTest {
     @Test
     public void inputTest_1() {
@@ -15,9 +10,7 @@ public class inputTests extends BaseTest {
         driver.findElement(By.cssSelector("[type=number]")).sendKeys(ARROW_UP, ARROW_UP);
         driver.findElement(By.cssSelector("[type=number]")).getAttribute("value");
         assertEquals(driver.findElement(By.cssSelector("[type=number]")).getAttribute("value"), "2");
-
     }
-
     @Test
     public void inputTests_2() {
         driver.get("https://the-internet.herokuapp.com/inputs");
@@ -33,5 +26,3 @@ public class inputTests extends BaseTest {
         assertEquals(driver.findElement(By.cssSelector("[type=number]")).getAttribute("value"), "");
     }
 }
-
-

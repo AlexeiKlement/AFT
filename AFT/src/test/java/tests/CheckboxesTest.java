@@ -1,11 +1,9 @@
 package tests;
+import org.testng.annotations.Test;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
-
 import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
-
 public class CheckboxesTest extends BaseTest {
     @Test
     public void the_first_checkbox_is_not_activ() {
